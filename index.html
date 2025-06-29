@@ -1,113 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Allison Haut Montalvão</title>
   <style>
     html, body {
       margin: 0; padding: 0;
-      height: 100%; overflow: auto;
-      color: white; font-family: Arial, sans-serif;
-      background: #0f0f0f;
+      height: 100%; 
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
+
     #vanta-bg {
-      position: fixed; width: 100%; height: 100%;
-      top: 0; left: 0; z-index: -1;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
     }
+
     .content {
-      position: relative; z-index: 1;
-      max-width: 1000px;
-      margin: 0 auto;
+      position: relative;
+      max-width: 960px;
+      margin: 2rem auto;
       padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      background: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.2);
     }
-    .section {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      border-radius: 8px;
+
+    h1, h2 {
+      margin-top: 0;
+      color: #00bfae; /* Verde-água para títulos */
     }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
     .media {
-      display: flex; flex-wrap: wrap; gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
     }
+
     .media img, .media video {
       width: calc(50% - 0.5rem);
       border-radius: 8px;
+      box-shadow: 0 0 8px #00bfae;
     }
+
     .lang-switch {
-      position: fixed; top: 1rem; right: 1rem;
-      background: #222;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+      position: fixed;
+      top: 1rem; right: 1rem;
+      background-color: #00bfae;
+      color: #0f0f0f;
       border: none;
-      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      z-index: 10;
     }
-    ul { padding-left: 1.2rem; }
+    .lang-switch:hover {
+      background-color: #009688;
+    }
   </style>
 </head>
 <body>
-  <button class="lang-switch" onclick="location.href='index.html'">Português</button>
+  <button class="lang-switch" onclick="window.location.href='en.html'">English</button>
+
   <div id="vanta-bg"></div>
 
   <div class="content">
-    <div class="section">
-      <header>
-        <h1>Allison Haut Montalvão</h1>
-        <p>Data Analyst • Data Scientist • BI • SQL • Power BI • Excel • Python</p>
-      </header>
-    </div>
-
-    <div class="section" id="about">
-      <h2>About me</h2>
-      <p>I’m a data analyst at Crevisc – Cooperativa Ailos. I’ve worked on CRM and Ailos System projects in Blumenau. My roles involve data collection, cleaning, and visualization, transforming data into strategic insights.</p>
-    </div>
-
-    <div class="section" id="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Interactive dashboards (Power BI, Excel)</li>
-        <li>Automated spreadsheets and dynamic reporting</li>
-        <li>Demand forecasting and time series analysis</li>
-        <li>Consulting in SQL, Python, and BI</li>
-      </ul>
-    </div>
-
-    <div class="section" id="portfolio">
-      <h2>Portfolio (images/videos)</h2>
-      <div class="media">
-        <img src="your-image1.jpg" alt="Dashboard">
-        <img src="your-image2.jpg" alt="Visualization">
-        <video src="your-video1.mp4" controls></video>
-        <video src="your-video2.mp4" controls></video>
-      </div>
-    </div>
-
-    <div class="section" id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/allison-haut-8aa835213/" target="_blank">linkedin.com/in/allison-haut-8aa835213</a></p>
-    </div>
-
-    <footer class="section">
-      <p>&copy; 2025 Allison Haut Montalvão</p>
-    </footer>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-  <script>
-    VANTA.NET({
-      el: "#vanta-bg",
-      color: 0x00bfae,
-      backgroundColor: 0x0f0f0f,
-      points: 10.0,
-      maxDistance: 25.0,
-      spacing: 20.0
-    });
-  </script>
-</body>
-</html>
+    <header>
+      <h1>Allison Haut Montalvão</h1>
