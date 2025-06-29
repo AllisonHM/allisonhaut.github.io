@@ -5,71 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Allison Haut Montalvão</title>
   <style>
-    html, body { margin:0; padding:0; height:100%; overflow:hidden; color:white; font-family:Arial,sans-serif; }
-    #vanta-bg { position:fixed; width:100%; height:100%; z-index:-1; top:0; left:0; }
-    .content { position:relative; z-index:1; padding:2rem; max-width:800px; margin:auto; }
-    .media { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem; }
-    .media img, .media video { max-width:48%; height:auto; border-radius:8px; }
-    header, section, footer { margin-bottom:2rem; }
-    .lang-switch { position:fixed; top:1rem; right:1rem; background:#222; color:white; padding:0.5rem 1rem; border:none; border-radius:4px; cursor:pointer; }
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%; overflow: auto;
+      color: white; font-family: Arial, sans-serif;
+      background: #0f0f0f;
+    }
+    #vanta-bg {
+      position: fixed; width: 100%; height: 100%;
+      top: 0; left: 0; z-index: -1;
+    }
+    .content {
+      position: relative; z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .section {
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .media {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+    }
+    .media img, .media video {
+      width: calc(50% - 0.5rem);
+      border-radius: 8px;
+    }
+    .lang-switch {
+      position: fixed; top: 1rem; right: 1rem;
+      background: #222;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    ul { padding-left: 1.2rem; }
   </style>
 </head>
 <body>
-  <button class="lang-switch" onclick="window.location.href='en.html'">EN</button>
+  <button class="lang-switch" onclick="location.href='en.html'">English</button>
   <div id="vanta-bg"></div>
+
   <div class="content">
-    <header>
-      <h1>Allison Haut Montalvão</h1>
-      <p>Analista de Dados | Data Scientist | BI | SQL | Power BI | Excel | Python</p>
-    </header>
+    <div class="section">
+      <header>
+        <h1>Allison Haut Montalvão</h1>
+        <p>Analista de Dados • Data Scientist • BI • SQL • Power BI • Excel • Python</p>
+      </header>
+    </div>
 
-    <section id="sobre">
+    <div class="section" id="sobre">
       <h2>Sobre mim</h2>
-      <p>Sou analista de dados na Crevisc – Cooperativa Ailos, onde participei de iniciativas como reuniões sobre CRM e Sistema Ailos em Blumenau :contentReference[oaicite:1]{index=1}. Atuo com coleta, limpeza e visualização de dados, transformando informações em insights estratégicos.</p>
-    </section>
+      <p>Sou analista de dados na Crevisc – Cooperativa Ailos. Participei de reuniões sobre CRM e integração do sistema Ailos em Blumenau. Trabalho com coleta, limpeza e visualização de dados para gerar insights estratégicos.</p>
+    </div>
 
-    <section id="servicos">
+    <div class="section" id="servicos">
       <h2>Serviços</h2>
       <ul>
-        <li>Construção de dashboards interativos (Power BI, Excel)</li>
-        <li>Planilhas automatizadas e relatórios dinâmicos</li>
+        <li>Dashboards interativos (Power BI, Excel)</li>
+        <li>Automatização de planilhas e relatórios dinâmicos</li>
         <li>Previsão de demandas e séries temporais</li>
         <li>Consultoria em SQL, Python e BI</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
+    <div class="section" id="portfolio">
+      <h2>Portfolio (imagens/vídeos)</h2>
       <div class="media">
-        <img src="sua-imagem1.jpg" alt="Exemplo de dashboard">
-        <img src="sua-imagem2.jpg" alt="Visualização de dados">
+        <img src="sua-imagem1.jpg" alt="Dashboard">
+        <img src="sua-imagem2.jpg" alt="Visualização">
         <video src="seu-video1.mp4" controls></video>
         <video src="seu-video2.mp4" controls></video>
       </div>
-    </section>
+    </div>
 
-    <section id="contato">
+    <div class="section" id="contato">
       <h2>Contato</h2>
       <p>Email: <a href="mailto:seu-email@example.com">seu-email@example.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/allison-haut-8aa835213/" target="_blank">linkedin.com/in/allison-haut-8aa835213</a></p>
-    </section>
+    </div>
 
-    <footer>
-      <p>&copy; 2025 Allison Haut Montalvão</p>
+    <footer class="section">
+      <p>&copy; 2025 Allison Haut Montalvão</p>
     </footer>
   </div>
 
-  <!-- Vanta.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script>
     VANTA.NET({
       el: "#vanta-bg",
-      color: 0xffffff,
+      color: 0x00bfae,          // verde‑água
       backgroundColor: 0x0f0f0f,
-      points: 12.0,
+      points: 10.0,
       maxDistance: 25.0,
-      spacing: 18.0
+      spacing: 20.0
     });
   </script>
 </body>
