@@ -2,144 +2,54 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allison Montalvão | Soluções em Dados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allison Haut Montalvão</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #20232a;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #20232a;
-    }
-    .servicos, .projetos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      background-color: #20232a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    a.botao {
-      background-color: #25D366;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    #background-effect {
+
+    #vanta-bg {
       position: fixed;
       width: 100%;
       height: 100%;
       z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <div id="background-effect"></div>
-  <div class="lang-switch">
-    <a href="en.html">🌐 Switch to English</a>
+  <div id="vanta-bg"></div>
+  <div class="content">
+    <!-- Seu conteúdo existente aqui -->
+    <h1>Bem-vindo ao meu portfólio!</h1>
+    <p>Sou Allison Haut Montalvão, analista de dados...</p>
   </div>
-  <header>
-    <h1>Allison Montalvão</h1>
-    <p>Especialista em Dashboards, Planilhas e Análise de Dados</p>
-    <a class="botao" href="https://wa.me/5547999999999" target="_blank">Fale comigo no WhatsApp</a>
-  </header>
 
-  <section>
-    <h2>Sobre Mim</h2>
-    <p>Sou analista de dados com experiência em Excel, Power BI, Google Sheets e previsão de vendas. Ajudo empresas a entenderem seus números de forma simples e clara.</p>
-  </section>
-
-  <section>
-    <h2>Serviços</h2>
-    <div class="servicos">
-      <div class="card">
-        <h3>Dashboards Profissionais</h3>
-        <p>Visualizações em Power BI, Excel ou Google Data Studio.</p>
-      </div>
-      <div class="card">
-        <h3>Planilhas Inteligentes</h3>
-        <p>Automatizadas com fórmulas e validações para facilitar sua rotina.</p>
-      </div>
-      <div class="card">
-        <h3>Consultoria em Dados</h3>
-        <p>Análise de vendas, indicadores e planejamento estratégico.</p>
-      </div>
-      <div class="card">
-        <h3>Modelos Prontos</h3>
-        <p>Planilhas e dashboards prontos para vendas, financeiro, estoque.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Portfólio</h2>
-    <div class="projetos">
-      <div class="card">
-        <h3>Dashboard de Vendas</h3>
-        <p>Resumo por produto, vendedor e região com metas mensais.</p>
-      </div>
-      <div class="card">
-        <h3>Controle Financeiro</h3>
-        <p>Entradas, saídas, saldos e previsão de fluxo de caixa.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Depoimentos</h2>
-    <p><em>"Allison organizou nossas planilhas de vendas e criou um painel que usamos todo dia. Simples e eficaz!"</em> — Cliente satisfeito</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Allison Montalvão | Dados que ajudam a decidir</p>
-  </footer>
-
+  <!-- Scripts do Vanta.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
   <script>
-    VANTA.DOTS({
-      el: "#background-effect",
-      mouseControls: true,
-      touchControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x00ffcc,
-      backgroundColor: 0xf9f9f9
-    })
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      color: 0x0f0f0f,
+      shininess: 50,
+      waveHeight: 20,
+      waveSpeed: 1.5,
+      zoom: 0.85
+    });
   </script>
 </body>
 </html>
