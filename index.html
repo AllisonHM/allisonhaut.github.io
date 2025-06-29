@@ -1,86 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Allison Haut Montalvão</title>
-  <style>
-    html, body {
-      margin: 0; padding: 0;
-      height: 100%; 
-      background-color: #0f0f0f;
-      color: white;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Allison Haut Montalvão – Serviços de Análise de Dados</title>
+<style>
+  /* Reset básico */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-    #vanta-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0f7f5;
+    background-color: #0f0f0f;
+    overflow-x: hidden;
+  }
 
-    .content {
-      position: relative;
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: rgba(0,0,0,0.5);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,255,0.2);
-    }
+  #vanta-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+  }
 
-    h1, h2 {
-      margin-top: 0;
-      color: #00bfae; /* Verde-água para títulos */
-    }
+  header {
+    background: rgba(0, 191, 174, 0.85);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,191,174,0.5);
+  }
 
-    p, li {
-      line-height: 1.6;
-    }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
 
-    ul {
-      padding-left: 1.3rem;
-      margin-top: 0.5rem;
-    }
+  nav button {
+    background: #e0f7f5;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #00695c;
+  }
 
-    .media {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
+  nav button:hover {
+    background: #b2dfdb;
+  }
 
-    .media img, .media video {
-      width: calc(50% - 0.5rem);
-      border-radius: 8px;
-      box-shadow: 0 0 8px #00bfae;
-    }
+  main {
+    padding: 6rem 2rem 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
-    .lang-switch {
-      position: fixed;
-      top: 1rem; right: 1rem;
-      background-color: #00bfae;
-      color: #0f0f0f;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      z-index: 10;
-    }
-    .lang-switch:hover {
-      background-color: #009688;
-    }
-  </style>
-</head>
-<body>
-  <button class="lang-switch" onclick="window.location.href='en.html'">English</button>
+  section {
+    margin-bottom: 4rem;
+    background: rgba(0,191,174,0.12);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0,191,174,0.3);
+  }
 
-  <div id="vanta-bg"></div>
-
-  <div class="content">
-    <header>
-      <h1>Allison Haut Montalvão</h1>
+  section h2 {
+    margin-top: 0;
+    color: #00bfae;
+    font-size: 2rem;
+    border-bottom: 2px solid #00bfae;
+    padding-botto
